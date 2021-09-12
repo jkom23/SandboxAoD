@@ -1,0 +1,10 @@
+Figure out:
+1. What does ~ represent?
+2. How to make a directory, then make an "Art of Data" directory somewhere convenient on your computer
+3. What these commands do:
+   1. `mv bigFile.dat ../BigStorage/BigDrawer`
+
+   2. `rm /mnt/d/garbage.can`
+   3. `echo "Hello" > greeting.hi`
+   4. `cat ../../secretFile.key`
+   5. `cp ../../glue.glu crafts/paper`
