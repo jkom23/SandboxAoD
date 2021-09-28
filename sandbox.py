@@ -24,11 +24,18 @@ def fraction(n):
     print (1/n)
 
 def factorial(n):
-    fact = 0
+    factorial = 0
     if n<0:
         return 0
     elif n==0 or n==1:
         return 1
     else:
-        fact =1
-        
+        factorial =1
+        while (n>1):
+            factorial=factorial*n
+            n-=1
+        return factorial
+
+def stars(n):
+    for i in range(n+1):
+        print ("*"*i)
