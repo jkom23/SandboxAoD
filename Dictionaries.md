@@ -64,9 +64,20 @@ key
 1. Write a function `count()` that takes a list of strings as input and outputs a dictionary where each unique string is a key, and its count is the value. For example, `count(["hello", "hello", "world", "hello"])` should return `{"hello": 3, "world": 1}`
 ```py
 
-story = ["A Hundred Ghosts Parade Tonight", "Xia Jia", "Xia Jia", "Xia Jia"]
+bakery = ["Brownie", "hello", "CupCake", "Brownie", "Cupcake", "Cookie", "Cookie"]
 
-def count(story[]):
-  return hello
+def count(list):
+  newDict = {}
+  x=0
+  for i in list:
+      if i in newDict:
+        x =newDict.get(i)
+        newDict[i]=x+1
+      else:
+        newDict[i]=1
+  print(newDict)
+
+
+count(bakery)
 
 ```

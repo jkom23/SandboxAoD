@@ -83,3 +83,19 @@ print(story)
 for k, v in story.items():
 	print("Key:", k)
 	print("Value:", str(v))
+
+bakery = ["Brownie", "hello", "CupCake", "Cupcake", "Brownie", "Cupcake", "Cookie", "Cookie"]
+
+def count(list):
+  newDict = {}
+  x=0
+  for i in list:
+      if i in newDict:
+        x =newDict.get(i)
+        newDict[i]=x+1
+      else:
+        newDict[i]=1
+  print(newDict)
+
+
+count(bakery)
