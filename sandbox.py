@@ -66,5 +66,20 @@ book = ["Minor","Feelings","by","Cathy", "Park", "Hong"]
 
 
 minute_miles = [8.4, 9.2, 8.1, 6.5, 6.1, 5.9, 7.4, 8.3, 6.2]
-minute_miles.remove(3.3)
-#doesnt work bc 3.3 isnt in the list
+
+story = {
+  "title": "Invisible Planets",
+  "author": "Hao Jingfang",
+  "published": 2013
+}
+
+print(story['author'])
+story["words"] = 6359
+story["title"] = "Folding Beijing"
+story["translator"] = "Ken Liu"
+del story['published']
+print(story)
+
+for k, v in story.items():
+	print("Key:", k)
+	print("Value:", str(v))
