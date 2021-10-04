@@ -21,12 +21,14 @@ def hellon(n):
     print("hello"*n)
 
 def fraction(n):
-    print (1/n)
+    for i in range (2,n,1):
+        print(1/i)
+
 
 def factorial(n):
     factorial = 0
     if n<0:
-        return 0
+        print ("the factorial does not exist")
     elif n==0 or n==1:
         return 1
     else:
@@ -36,6 +38,33 @@ def factorial(n):
             n-=1
         return factorial
 
+def factortial(n):
+    if (n==0 or n==1):
+        return 1
+    else:
+        print(str(n)+" * factortial(" + str(n) +"-1)")
+        return n*factortial(n-1)
+
+def factoriality(n):
+    total=1
+    for i in range(1,n+1):
+        total *= i
+    return total
+
 def stars(n):
     for i in range(n+1):
         print ("*"*i)
+
+def makeStars(n):
+    for i in range (1,n+1):
+        for j in range(i):
+            print("*", end ='')
+        print()
+
+
+book = ["Minor","Feelings","by","Cathy", "Park", "Hong"]
+
+
+minute_miles = [8.4, 9.2, 8.1, 6.5, 6.1, 5.9, 7.4, 8.3, 6.2]
+minute_miles.remove(3.3)
+#doesnt work bc 3.3 isnt in the list

@@ -62,8 +62,9 @@ def hellon(n):
 1. `fraction(n)` prints the float representations of `1/2, 1/3, 1/4 ... 1/n`
 
 def fraction(n):
-    print (1/n)
-
+    for i in range (2,n,1):
+        print(1/i)
+        
 1. `factorial(n)` returns the factorial of _n_ (written as `n!`)
 
 def factorial(n):
