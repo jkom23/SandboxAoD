@@ -68,11 +68,9 @@ bakery = ["Brownie", "hello", "CupCake", "Brownie", "Cupcake", "Cookie", "Cookie
 
 def count(list):
   newDict = {}
-  x=0
   for i in list:
       if i in newDict:
-        x =newDict.get(i)
-        newDict[i]=x+1
+        newDict[i]=newDict[i]+1
       else:
         newDict[i]=1
   print(newDict)
