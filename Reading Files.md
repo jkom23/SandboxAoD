@@ -1,3 +1,4 @@
+Jack Komaroff
 # Reading Files
 Download `favorite_colors.csv` and put it in a folder named `datasets` in your Art of Data folder.
 
@@ -73,6 +74,8 @@ Write a Python file to analyze `favorite_colors.csv` and create a **nested dicti
 1. How many students in 9th grade put blue as their favorite color?
 1. How many students in total put yellow as their favorite color?
 
+
+**Two methods can answer this question. 2nd method (csvToTable()) is prefered because it is not hard-coded**
 ```py
 import csv
 def csvToDict():
@@ -92,21 +95,22 @@ def csvToDict():
         ans["Q2"]["# of Students whose favorite color is yellow"] = yellowTotal
   print(ans)
     
-def csvToDict():
+  def csvToTable():
   with open("Datasets/favorite_colors.csv", "r") as file:
-    table={}
+    table={"Total":{}}
     data = csv.reader(file)
+    next(data)
     for i in data:
-        if i not in table:
-          table={i:{}}
-        
-      # grade = i[0]
-      # favorite_color =i[1]
-      # if (grade=="9" and favorite_color=="blue"):
-      #   nineBlue+=1
-      #   ans["Q1"]["# of 9th graders whose favorite color is blue"] = nineBlue
-      # elif (favorite_color=="yellow"):
-      #   yellowTotal+=1
-      #   ans["Q2"]["# of Students whose favorite color is yellow"] = yellowTotal
-  print(ans)
+        if i[0] not in table:
+          table[i[0]]={}
+        if i[1] not in table[i[0]]:
+          table[i[0]][i[1]] = 1
+        else:
+          table[i[0]][i[1]]+=1
+        if i[1] not in table["Total"]:
+          table["Total"][i[1]]=1
+        else: 
+          table["Total"][i[1]]+=1
+  print(table)
+
 ```
