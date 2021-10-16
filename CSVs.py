@@ -1,5 +1,6 @@
 import csv
 
+'''
 with open("Datasets/favorite_colors.csv", "w") as f:
   print(f)
 
@@ -12,7 +13,7 @@ with open("Datasets/favorite_colors.csv", "r") as f:
   data = csv.reader(f)
   for row in data:
     print(row)
-
+'''
 
 
 
@@ -52,5 +53,29 @@ def csvToTable():
           table["Total"][i[1]]+=1
   print(table)
 
-csvToTable()
 
+
+
+def csv2Table(fp):
+  print(fp)
+  with open(fp, "r") as file:
+    d={"total" : {}}
+    data = csv.DictReader(file)
+    for i in data:
+      if i["grade"] not in d.keys():
+      
+         #if we have not seen the new grade
+        d[i["grade"]] = {i["favorite_color"] : 1}
+        #make a new subdictionary named the grade, and have its key be the color, and its value as 1
+      else: #if we have seen the grade before
+        if i["favorite_color"] not in d[i["grade"]].keys():
+          #if we have seen this grade - color combination
+          d[i["grade"]][i["favorite_color"]]=1
+          #then make a new color key in the grade subdictionary with value 1
+        else: 
+         d[i["grade"]][i["favorite_color"]]+=1
+         #add 1 to the the color key becuase we have seen this grade-color combo before
+  return d
+  
+  
+print(csv2Table("Datasets/favorite_colors.csv"))
