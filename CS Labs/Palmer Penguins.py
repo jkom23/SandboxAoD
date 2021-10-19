@@ -6,7 +6,7 @@ CS Lab: Reading Files Practice
 import csv
 #import our csv module
 
-
+#how to find the average bill length of a penguin species by reading a csv and iterating through the data
 def penguinAvgBillLength(filepath):
 #find the average bill length of each species of penguin
   with open(filepath, "r") as file:
@@ -20,7 +20,7 @@ def penguinAvgBillLength(filepath):
     for i in data:
     #iterate through the data
         if i[0] not in table:
-        #if the species is not in the table
+        #if new species
           table[i[0]]={}
           #add the species as a subdictionary to the table dict
           table[i[0]]["Total Bill Length"]=0
@@ -41,7 +41,8 @@ def penguinAvgBillLength(filepath):
             #add the length to our total bill length
             table[i[0]]["Number of Penguins"]+=1
             #increase number of penguins by 1
-        table[i[0]]["Average Bill Length"]=(table[i[0]]["Total Bill Length"])/(table[i[0]]["Number of Penguins"])
+    for species in table:
+        table[species]["Average Bill Length"]=(table[species]["Total Bill Length"])/(table[species]["Number of Penguins"])
         #calculate our average bill length 
   print(table)
   #print our table dictionary
