@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b378ffd9-fb1f-4f3e-8bb6-b4ac4cbaee78" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SandboxAoD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SandboxAoD.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSVs.py" beforeDir="false" afterPath="$PROJECT_DIR$/CSVs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Datasets/favorite_colors.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Datasets/favorite_colors.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS Labs/digimon.py" beforeDir="false" afterPath="$PROJECT_DIR$/CS Labs/digimon.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

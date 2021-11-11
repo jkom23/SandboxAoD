@@ -50,7 +50,7 @@ def findDigimonTeam(filePath, desiredNumDigimon, desiredAttackTotal, desiredMemo
             #make our data ints
             i[9]=int(i[9])
             i[5]=int(i[5])
-            #if the specific digimon has suffienct attack power, not too much memory, and we havent filled a team roster yet
+            #if the specific digimon has sufficient attack power, not too much memory, and we haven't filled a team roster yet
             if (i[9] >= atkPerDigimon) and (i[5]<=memPerDigimom) and (numDigimon<=(desiredNumDigimon-1)):
                 numDigimon+=1
                 totalAttackPower+=i[9]
