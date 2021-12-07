@@ -109,3 +109,5 @@ else:
     we read the response.text
 7. What is an HTTP **status code**?
    an error code (ex. 404 not found)
+
+json objects are stored in response object (stored on our PC)
