@@ -1,3 +1,4 @@
+from cmath import pi
 import random
 import math
 
@@ -14,3 +15,4 @@ for i in range(1,1000000):
 
 pi_estimate=4*(numerator/denominator)
 print(pi_estimate)
+print(abs((pi_estimate-math.pi)/math.pi)*100)
